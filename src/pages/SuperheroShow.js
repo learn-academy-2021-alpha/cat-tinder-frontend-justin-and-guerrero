@@ -4,8 +4,9 @@ class SuperheroShow extends Component {
     render () {
         return (
             <>
+            show
             </>
         )
     }
 }
-export default superheroshow
+export default SuperheroShow

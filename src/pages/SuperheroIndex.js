@@ -4,8 +4,9 @@ class SuperheroIndex extends Component {
     render () {
         return (
             <>
+            index
             </>
         )
     }
 }
-export default superheroindex
+export default SuperheroIndex

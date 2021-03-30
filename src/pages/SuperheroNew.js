@@ -4,8 +4,9 @@ class SuperheroNew extends Component {
     render () {
         return (
             <>
+            new
             </>
         )
     }
 }
-export default superheronew
+export default SuperheroNew

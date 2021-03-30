@@ -4,8 +4,9 @@ class SuperheroEdit extends Component {
     render () {
         return (
             <>
+            edit
             </>
         )
     }
 }
-export default superheroedit
+export default SuperheroEdit
