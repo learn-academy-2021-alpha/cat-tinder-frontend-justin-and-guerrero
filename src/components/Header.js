@@ -5,10 +5,10 @@ class Header extends Component {
     render () {
         return (
          <>
-           <Jumbotron fluid>
+          <Jumbotron fluid>
             <Container fluid>
-            <h1 className="display-3">Superhero Tinder</h1>
-            <p className="lead">Find a connection</p>
+                <h1 className="display-3">Superhero Tinder</h1>
+                <p className="lead">Find a connection</p>
             </Container>
           </Jumbotron>
          </>
