@@ -19,3 +19,4 @@ class SuperheroIndex extends Component {
     }
 }
 export default SuperheroIndex
+// pseudo

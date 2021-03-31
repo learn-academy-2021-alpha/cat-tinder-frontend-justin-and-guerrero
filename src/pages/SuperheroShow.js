@@ -16,3 +16,4 @@ class SuperheroShow extends Component {
     }
 }
 export default SuperheroShow
+// pseudo
