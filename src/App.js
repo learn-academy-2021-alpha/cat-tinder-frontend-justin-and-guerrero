@@ -32,7 +32,7 @@ class App extends Component{
             <Switch>
               <Route exact path= "/" component= { Home }/> 
               <Route path="/superheroedit/:id" component={ SuperheroEdit }/>
-              <Route path="/superheroindex" render= { () => <SuperHeroIndex superheroes={ this.state.superheroes } /> } />
+              <Route path="/superheroindex" render= { () => <SuperheroIndex superheroes={ this.state.superheroes } /> } />
               <Route path="/superheronew" component={ SuperheroNew }/>
               <Route path="/superheroshow/:id" component={ SuperheroShow }  />
               <Route component= { NotFound } />
