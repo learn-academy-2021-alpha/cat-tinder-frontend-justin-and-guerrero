@@ -9,7 +9,7 @@ class SuperheroIndex extends Component {
                     {this.props.superheroes.map(superhero => {
                         return (
                             <li key={superhero.id}>
-                                <a href={'/superheroshow/${superhero.id}'}>{superhero.name}</a>
+                                <a href={`/superheroshow/${superhero.id}`}>{superhero.name}</a>
                             </li>
                         )
                     })}
