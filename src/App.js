@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -29,6 +28,10 @@ class App extends Component{
     console.log(newhero)
   }
 
+  updateHero = (editHero) => {
+    console.log(editHero)
+  }
+
   render (){
     return (
       <>
@@ -45,7 +48,9 @@ class App extends Component{
               <Route path="/superheronew" render= { (props) => {
                 return <SuperheroNew createNewHero={ this.createNewHero }/> 
               }}/>
-              <Route path="/superheroedit/:id" component={ SuperheroEdit }/>
+              <Route path="/superheroedit/:id" render= { (props) => {
+                return <SuperheroEdit updateHero={ this.updateHero }/> 
+              }}/>
               <Route component= { NotFound } />
             </Switch>
           < Footer />
