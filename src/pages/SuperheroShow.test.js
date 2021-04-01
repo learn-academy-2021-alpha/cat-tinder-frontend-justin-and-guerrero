@@ -10,7 +10,6 @@ describe ('When Superhero Show renders', () => {
   it ('displays the show header', () => {
     const superheroShow = shallow(<SuperheroShow />)
     const newShow = superheroShow.find('h1')
-    //console.log(something.debug())
     expect(newShow.text()).toEqual('show')
   })
 })
