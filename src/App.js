@@ -36,7 +36,6 @@ class App extends Component{
               <Route path="/superheronew" component={ SuperheroNew }/>
               <Route path="/superheroshow/:id" render= { (props) => {
                 const id = parseInt(props.match.params.id);
-                console.log(id)
                 const foundHero = this.state.superheroes.find((hero) => hero.id === id);
                 return <SuperheroShow hero={foundHero}/>}
               }  />

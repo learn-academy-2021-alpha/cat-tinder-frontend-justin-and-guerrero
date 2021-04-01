@@ -10,7 +10,6 @@ describe ('When Superhero New renders', () => {
   it ('displays an the new header', () => {
     const superheroNew = shallow(<SuperheroNew />)
     const newHero = superheroNew.find('h1')
-    //console.log(something.debug())
     expect(newHero.text()).toEqual('new')
   })
 })

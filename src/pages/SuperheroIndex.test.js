@@ -10,7 +10,6 @@ describe ('When Superhero Index renders', () => {
   it ('displays an the index header', () => {
     const superheroIndex = shallow(<SuperheroIndex />)
     const tinder = superheroIndex.find('h1')
-    //console.log(something.debug())
     expect(tinder.text()).toEqual('index')
   })
 })

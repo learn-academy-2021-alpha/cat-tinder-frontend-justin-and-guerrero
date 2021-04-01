@@ -10,7 +10,7 @@ describe ('When notFound renders', () => {
   it ("displays an error message saying 'notFound'", () => {
     const notFound = shallow(<NotFound />)
     const found = notFound.find('h1')
-    //console.log(something.debug())
+  
     expect(found.text()).toEqual('NotFound')
   })
 })
