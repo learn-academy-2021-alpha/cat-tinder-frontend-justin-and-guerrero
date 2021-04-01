@@ -61,7 +61,7 @@ class SuperheroNew extends Component {
                 <Button
                     onClick={ this.handleSubmit }
                 >
-                    Add a New Cat
+                    Add New Hero
                 </Button>
             </Form>
             { this.state.submitted && <Redirect to="/superheroindex" /> }
