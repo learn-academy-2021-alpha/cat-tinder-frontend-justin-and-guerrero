@@ -24,6 +24,11 @@ class App extends Component{
       superheroes: mockSuperheroes
     }
   }
+
+  createNewHero = (newhero) => {
+    console.log(newhero)
+  }
+
   render (){
     return (
       <>
@@ -31,14 +36,16 @@ class App extends Component{
           < Header />
             <Switch>
               <Route exact path= "/" component= { Home }/> 
-              <Route path="/superheroedit/:id" component={ SuperheroEdit }/>
               <Route path="/superheroindex" render= { () => <SuperheroIndex superheroes={ this.state.superheroes } /> } />
-              <Route path="/superheronew" component={ SuperheroNew }/>
               <Route path="/superheroshow/:id" render= { (props) => {
                 const id = parseInt(props.match.params.id);
                 const foundHero = this.state.superheroes.find((hero) => hero.id === id);
                 return <SuperheroShow hero={foundHero}/>}
-              }  />
+              }/>
+              <Route path="/superheronew" render= { (props) => {
+                return <SuperheroNew createNewHero={ this.createNewHero }/> 
+              }}/>
+              <Route path="/superheroedit/:id" component={ SuperheroEdit }/>
               <Route component= { NotFound } />
             </Switch>
           < Footer />
