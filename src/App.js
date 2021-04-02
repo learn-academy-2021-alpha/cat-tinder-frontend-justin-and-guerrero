@@ -42,8 +42,26 @@ class App extends Component{
     })
   }
 
-  createNewHero = (newhero) => {
-    console.log(newhero)
+  createNewHero = (newHero) => {
+    fetch("http://localhost:3000/superheros", {
+      body: JSON.stringify(newHero),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+    .then (response => {
+      if(response.status === 422) {
+        alert("something went wrong")
+      }
+      return response.json()
+    })
+    .then(payload => {
+      this.superheroIndex()
+    })
+    .catch(errors => {
+      console.log("index erros:", errors)
+    })
   }
 
   updateHero = (editHero) => {
