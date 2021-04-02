@@ -8,7 +8,7 @@ import SuperheroEdit from './pages/SuperheroEdit';
 import SuperheroIndex from './pages/SuperheroIndex';
 import SuperheroNew from './pages/SuperheroNew';
 import SuperheroShow from './pages/SuperheroShow';
-import mockSuperheroes from './mockSuperheroes';
+//import mockSuperheroes from './mockSuperheroes';
 import {
   BrowserRouter as Router,
   Route,
@@ -20,8 +20,26 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      superheroes: mockSuperheroes
+      superheroes: []
     }
+  }
+
+  componentDidMount(){
+    this.superheroIndex()
+  }
+
+  superheroIndex = () => {
+    fetch("http://localhost:3000/superheros")
+    .then(response => {
+      return response.json()
+    })
+    .then(superheroArray => {
+      console.log(superheroArray)
+      this.setState({ superheroes: superheroArray })
+    })
+    .catch(errors => {
+      console.log("index errors:", errors)
+    })
   }
 
   createNewHero = (newhero) => {

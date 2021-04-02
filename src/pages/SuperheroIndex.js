@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 class SuperheroIndex extends Component {
     render () {
@@ -9,7 +10,7 @@ class SuperheroIndex extends Component {
                     {this.props.superheroes.map(superhero => {
                         return (
                             <li key={superhero.id}>
-                                <a href={`/superheroshow/${superhero.id}`}>{superhero.name}</a>
+                                <NavLink to={`/superheroshow/${superhero.id}`}>{superhero.name}</NavLink>
                             </li>
                         )
                     })}
